@@ -10,6 +10,6 @@ Como exemplo será utlizado o conjunto de dados *palmerpenguis* que traz informa
 
 ##🔎 Análise Exploratória
 
-- 'head': Retorna apena as 6 primeiras linhjas de um conjunto de dados
-  - Sua sintaxe é: 'head(palmerpenguins)'
+- `head`: Retorna apena as 6 primeiras linhjas de um conjunto de dados
+  - Sua sintaxe é: `head(palmerpenguins)`
 -'mutate': c
