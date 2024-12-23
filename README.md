@@ -18,7 +18,7 @@ Evidentemente para realizar uma análise de dados no R se fazem necessários dad
 - `read_delim()`: Leitura de aquivos do tipo *delim*, arquivos delimitados em geral.
 - `read_fwf()`: Leitura de aquivos do tipo *fwf*, formato de largura fixa.
 - `read_table()`: Leitura de aquivos do tipo *table*, arquivos armazenados em formato de tabelas com colunas separadas por espaços em branco.
-- `read_log`: Leitura de aquivos do tipo *log*, log são registros de atividades realizadas por programas de computador. Eles contêm informações sobre eventos, processos ou mensagens que ocorrem em um sistema, como gravação ou leitura em um banco de dados.
+- `read_log()`: Leitura de aquivos do tipo *log*, log são registros de atividades realizadas por programas de computador. Eles contêm informações sobre eventos, processos ou mensagens que ocorrem em um sistema, como gravação ou leitura em um banco de dados.
 
 
 
