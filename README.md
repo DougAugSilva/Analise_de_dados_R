@@ -5,6 +5,7 @@ O conteudo aqui apresentado são funções básicas para importar, realizar uma 
  - **tidyr:** Contém várias ferramentas para a limpeza e copmpreção de dados.
  - **readr:** Usado para importar varios formatos de dados, como por exemplo csv.s' ou arquivos.xlsx.
  - **dplyr:** Oferece uma gama de funções que ajudam na manipuulação e filtragem de dados.
+
 Antes de tudo instale o pacote *tydiverse* utlizando o comando `install.packges("tydiverse")` e posteriormente ative a bivblioteca com `library(tydiverse)`.
 Como exemplo será utlizado o conjunto de dados *palmerpenguis* que traz informações sobre três espécies de penguins, como por exemplo massa corpórea, tamanho das patas e etc. Este pacote pode ser instaldo por `install.packges("palmerpenguins")` e ativado com `library(palmerpenguins)`.
 
