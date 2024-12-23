@@ -11,7 +11,7 @@ Antes de tudo instale o pacote *tydiverse* utlizando o comando `install.packges(
 Como exemplo será utlizado o conjunto de dados *palmerpenguis* que traz informações sobre três espécies de penguins, como por exemplo massa corpórea, tamanho das patas e etc. Este pacote pode ser instaldo por `install.packges("palmerpenguins")` e ativado com `library(palmerpenguins)`.
 
 ## 📥 Importando Dados
-Evidentemente para realizar uma análise de dados no R se fazem necessários dados, podemos trabalhar com alguns conjuntos de dados já disponiveis po padrão no R, como o *diamonds* por exemplo, ou importar via internet um conjunto cionmo o *palmerpenguins*, porém não nos limitamod a isso, de fato, como já rfoi citado anteriormente, o pacote *readr* nos fornece vários comando para importar dados de vários formatos, alguns dos principais são:
+Evidentemente para realizar uma análise de dados no R se fazem necessários dados, podemos trabalhar com alguns conjuntos de dados já disponiveis po padrão no R, como o *diamonds* por exemplo, ou importar via internet um conjunto como o *palmerpenguins*, porém não nos limitamos a isso, de fato, como já foi citado anteriormente, o pacote *readr* nos fornece vários comando para importar dados de vários formatos, alguns dos principais são:
 
 - `read_csv()`: Leitura de aquivos do tipo *csv*, valores separados por virgulas.
 - `read_tsv()`: Leitura de aquivos do tipo *tsv*, valores separados por tabulação, como tabelas em planilhas.
