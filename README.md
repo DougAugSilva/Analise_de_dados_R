@@ -8,7 +8,7 @@ O conteudo aqui apresentado são funções básicas para importar, realizar uma 
 Antes de tudo instale o pacote *tydiverse* utlizando o comando `install.packges("tydiverse")` e posteriormente ative a bivblioteca com `library(tydiverse)`.
 Como exemplo será utlizado o conjunto de dados *palmerpenguis* que traz informações sobre três espécies de penguins, como por exemplo massa corpórea, tamanho das patas e etc. Este pacote pode ser instaldo por `install.packges("palmerpenguins")` e ativado com `library(palmerpenguins)`.
 
-##🔎 Análise Exploratória
+## 🔎 Análise Exploratória
 
 - `head`: Retorna apena as 6 primeiras linhjas de um conjunto de dados
   - Sua sintaxe é: `head(palmerpenguins)`
