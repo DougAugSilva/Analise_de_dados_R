@@ -27,7 +27,7 @@ O primeiro paso a se tomar depois de ter importado o conjunto de dados é realiz
 
 - `head`: Retorna apena as 6 primeiras linhjas de um conjunto de dados
   - Sintaxe: `head(penguins)`
-- `str`: Nos da informações sobre a estrutura do conjunto de dados, com o nome das colunas e os tipos de dados presentes nelas>:
+- `str`: Nos da informações sobre a estrutura do conjunto de dados, com o nome das colunas e os tipos de dados presentes nelas:
   - Sintaxe: `str(penguins)`
 - `glimpse`: Retorna um resumo do conjunto de daados, com a quantidade de linhas, quantidade de colunas, bem como um exemplo dos dados presentes em cada coluna
   - Sintaxe: `glimpse(penguins)`
