@@ -87,4 +87,4 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 
 - `mutate()`: Crua uma nova coluna com base em clounas existentes, podendo por exemplo criar uma nova coluna com unidades de medidas convertidas de uma coluna existentes.
 
----modulo 3
+---modulo 3 , leitura Wide to long with tidyr
