@@ -85,6 +85,6 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 
 - `unite()`: Faz basicamente o oposto da `separate()`, unindo duas ou mais colunas de strings em uma única. Um exemplo é: `unite(employee, "name", first_name, last_name, sep = " ")`, que une os dados das colunas *first_name* e *last_name* em uma coluna chamada *name*, com o seprarador " " entre os dados.
 
-- `mutate()`: Crua uma nova coluna com base em clounas existentes, podendo por exemplo criar uma nova coluna com unidades de medidas convertidas de uma coluna existentes.
+- `mutate()`: Cria uma nova coluna com base em clounas existentes, podendo por exemplo criar uma nova coluna com unidades de medidas convertidas de uma coluna existentes.
 
 ---modulo 3 , leitura Wide to long with tidyr
