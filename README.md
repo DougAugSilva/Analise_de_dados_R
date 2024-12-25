@@ -53,7 +53,7 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
   
 - `select()`: Assim como no *SQL*, esta função permite selecionar apenas colunas especificas do conjuhnto de dados. Mudando um pouco a sintaxe é possivel selecionar o complementar de um conjuntos de coluas especifico, basta adicionarmos o sinal "-" antes do nome da coluna. Sua sintaxe é `select(nomes das colunas)`.
   
-- `rename()`: Permite alterar o nome de certas colunas no banco de dados. Sua sintaxe é `rename(nome da coluna = novo nome da coluna)`.
+- `rename()`: Permite alterar o nome de certas colunas no banco de dados. Sua sintaxe é `rename(novo nome da coluna = nome da coluna)`.
   
 - `rename_with()`: Altera o nome das colunas para que este sejam mais consistente, podendo deixar os nomes em letras maiusculas ou minusculas, sua sintaxe é:
   - `rename_with(penguins , toupper)`: Deixa todos os nomes das colunas do banco de dados em *caixa alta*.
