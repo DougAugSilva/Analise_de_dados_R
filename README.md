@@ -85,6 +85,34 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 
 - `unite()`: Faz basicamente o oposto da `separate()`, unindo duas ou mais colunas de strings em uma única. Um exemplo é: `unite(employee, "name", first_name, last_name, sep = " ")`, que une os dados das colunas *first_name* e *last_name* em uma coluna chamada *name*, com o seprarador " " entre os dados.
 
-- `mutate()`: Cria uma nova coluna com base em clounas existentes, podendo por exemplo criar uma nova coluna com unidades de medidas convertidas de uma coluna existentes.
+- `mutate()`: Cria uma nova coluna com base em clounas existentes, podendo por exemplo criar uma nova coluna com unidades de medidas convertidas de uma coluna existente.
 
----modulo 3 , leitura Wide to long with tidyr
+## 📊 Análise Estatística e Gráfica dos Dados
+ Depois de uma Análise Exploratória e uma Limpeza dos dados disponiveis, serão utilizadas funções presentes por padrão no *R* e no pacote *ggplot2* do *tidyverse* para uma análise gráfica e estatíostica mais aprofundada dos dados.
+
+ ### Estatística Descritiva
+
+- `mean()`: Retorna a *média* de variaveis selecionadas. A média é uma medida estatística a priori dos dados que nos diz o centro de densidade da distribuição dos dados.
+  
+- `median()`: Nos dá a mediana do conjunto de dados. A mediana é o valor central de um conjunto de dados ordenado de forma crescente ou decrescente.
+
+- `max()`: Retorna o valor máximo assumido no conjunto de dados.
+
+- `min()`: Retorna o valor mínimo assumido no conjunto de dados.
+
+- `range()`: Retorna os valores máximo e mínimos do conjunto de dados.
+
+- `quantile()`: Nos dá os quartis do conjunto de dados. Os quartis são valores que dividem o conjunto de dados ordenado (de forma crescente ou decrescente) em quatro partes de mesma quantia de dados. Alguns exemplos de sua sintaxe:
+  - `quantile(x)`: Retrona os quartis de x.
+  - `quantile(x, 0.6)`: Retorna o valor do conjunto de dados x que é maior que 60% dos dados.
+ 
+- `summary()`: Nos dá um resumo com o valor máximo, mínimo, mediana, primeiro e segundo quartis do conjunto de dados.
+
+- `sd()`: Calcula o *desvio padrão* das variaveis selecionadas. O desvio padrão mede o quão os valores do conjunto de dados estão disperços em relação a média.
+  
+- `cor()`: Mede a correlação da variação entre duas variaveis escolhidas, possuindo valores no intervalo entre - 1 e 1, sendo valores póroximo de 1 representando uma correlão positivas forte, e valores próximos de -1 uma correlção negativa forte. <br/>
+Sua sintaxe é `cor(x, y)`, sendo x e y as variaveis.
+
+### Análise Gráfica
+
+
