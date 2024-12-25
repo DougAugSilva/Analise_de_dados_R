@@ -3,7 +3,7 @@ O conteudo aqui apresentado são anotações feitas durante o curso *Data Analys
 O conteudo aqui apresentado são funções básicas para importar, realizar uma análise exploratória, limpar e organizar os dados e plotar gráficos utilizando o pacote *tidyverse*, sendo que os pacotes abordados serão:
 
  - **ggplot2:** Possui uma variedade de Ferramentas para vcisualização de dados e plotagem de gráficos.
- - **tidyr:** Contém várias ferramentas para a limpeza e copmpreção de dados.
+ - **tidyr:** Contém várias ferramentas para a limpeza e compreção de dados.
  - **readr:** Usado para importar varios formatos de dados, como por exemplo csv.s' ou arquivos.xlsx.
  - **dplyr:** Oferece uma gama de funções que ajudam na manipuulação e filtragem de dados.
 
