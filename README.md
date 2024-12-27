@@ -134,6 +134,10 @@ Para esta parte, além do conjunto de dados *palmerpenguins*, será utilizado o 
 
 - `facet_grid()`: Também cria gráficos dividindo os dados conforme variaveis escolhidas, sendo que agora divide verticalmente os dados conforme a primeira variavel escolhida, e horizontalmente conforme a segunda variavel escolhida.
 
+- `labs()`: Permite personalizar os texto fora do grid do seu gráfico, como adicionado titulo com `title`, subtitulo com `subtitle` e legenda com `caption`.
+
+- `annotate()`: Permite adicionar textos agora nmo interior do grid do gráfico, podendo escolhera localização do texto no grid, a cor com `color`, o estilo da fonte com `fontface`, o tamanho da fonte com `size` e até mesmo o ângulo do texto com relação ao eixo *x* com `angle`.
+
 
 
 
