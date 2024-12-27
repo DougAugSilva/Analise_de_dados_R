@@ -138,6 +138,8 @@ Para esta parte, além do conjunto de dados *palmerpenguins*, será utilizado o 
 
 - `annotate()`: Permite adicionar textos agora nmo interior do grid do gráfico, podendo escolhera localização do texto no grid, a cor com `color`, o estilo da fonte com `fontface`, o tamanho da fonte com `size` e até mesmo o ângulo do texto com relação ao eixo *x* com `angle`.
 
+- `ggsave()`: Salva o ultimo grafico criado em um formado escolhido, como pdf ou png por exemplo, podemos também modificar as dimenções da imagem salva adicionando as clausulas `width` e `height`.
+
 
 
 
