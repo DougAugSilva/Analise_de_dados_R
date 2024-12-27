@@ -114,5 +114,19 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 Sua sintaxe é `cor(x, y)`, sendo x e y as variaveis.
 
 ### Análise Gráfica
+Para esta parte, além do conjunto de dados *palmerpenguins*, será utilizado o conjunto de dados *diamonds* que vem por padrão no pacote *ggplot*. Os exemplos aplicados dos gráficos estarão no código em R do repositório.
 
+- `hist()`: Constroi um histograma dos dados com base na frequencia de seus valores. Podemos mudar a cor do histograma com a estética `color`, e mudar os rotulos dos eixos com `xlab`, `ylab`, bem como o nome do gráfico com `main`.
+  
+- `boxplot:` Constroi um boxplot dos dados selecionados. Novamente podemosnm mudar sua cor com `color` e nome com `main`.
+
+- `ggplot()`: Cria um grafico vazio para adicionarmos estéticas conforme o tipo de gráfico.
+
+- `aes()`: Atribuiu quais variaveis do conjunto de dados serão o eixo das absissas *x* e quais serão o eixo das ordenadas *y* no gráfico.
+
+- `geom_point()`: Dispõe os dados como pontos no gráfico, construindo pior exemplo graficos de disperção.
+
+- `geom_smooth()`: Cria um grafico de linhas com os dados, podendo ser combinado com o `geom_point` para tornar evidente tendencias nos dados por exemplo.
+
+- `geom_bar()`: Dispõe os dados como retnagulos, criando assim grafico de barras. Podemos a cor do contorno dos rentangulos com a estética `color`, bem como a cor do interior de cada retanmgulo com `fill`, sendo que mudando a variavel ao qual *fill* está atribuido, mudamos o modo em que as barras são coloridas.
 
