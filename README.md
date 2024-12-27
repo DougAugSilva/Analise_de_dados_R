@@ -130,3 +130,10 @@ Para esta parte, além do conjunto de dados *palmerpenguins*, será utilizado o 
 
 - `geom_bar()`: Dispõe os dados como retnagulos, criando assim grafico de barras. Podemos a cor do contorno dos rentangulos com a estética `color`, bem como a cor do interior de cada retanmgulo com `fill`, sendo que mudando a variavel ao qual *fill* está atribuido, mudamos o modo em que as barras são coloridas.
 
+- `facet_wrap()`: Escolhida uma variavel, esta função cria um gráfico para cada elemnto da variavel
+
+- `facet_grid()`: Também cria gráficos dividindo os dados conforme variaveis escolhidas, sendo que agora divide verticalmente os dados conforme a primeira variavel escolhida, e horizontalmente conforme a segunda variavel escolhida.
+
+
+
+
