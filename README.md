@@ -1,7 +1,7 @@
 # Utilizando tidyverse para Analizar Dados com R
 
-O conteudo aqui apresentado são anotações feitas durante o curso *Data Analysis with R Programming* que faz parte do *Google Data Analist Certificate*, e tem como objetivo servir de guia para quem procura realizar análises de conjuntos de dados com a linguagem de programação R.
-O conteudo aqui apresentado são funções básicas para importar, realizar uma análise exploratória, limpar e organizar os dados e plotar gráficos utilizando o pacote *tidyverse*, sendo que os pacotes abordados serão:
+O conteudo aqui apresentado são anotações feitas durante o curso *Data Analysis with R Programming*, que faz parte do *Google Data Analist Certificate* e tem como objetivo servir de guia para quem procura realizar análises de conjuntos de dados com a linguagem de programação R.
+Aqui estão presentes funções básicas para importar, realizar uma análise exploratória, limpar e organizar os dados e plotar gráficos como na figura abaixo utilizando o pacote *tidyverse*, sendo que os pacotes abordados serão:
 
 ![Grafico1](https://github.com/DougAugSilva/Analise_de_dados_R/blob/main/Graficos/Rplot09.png)
 
@@ -10,11 +10,11 @@ O conteudo aqui apresentado são funções básicas para importar, realizar uma 
  - **readr:** Usado para importar varios formatos de dados, como por exemplo csv.s' ou arquivos.xlsx.
  - **dplyr:** Oferece uma gama de funções que ajudam na manipuulação e filtragem de dados.
 
-Antes de tudo instale o pacote *tydiverse* utlizando o comando `install.packges("tidyverse")` e posteriormente ative a biblioteca com `library(tidyverse)`.
-Como exemplo será utlizado o conjunto de dados *palmerpenguis* que traz informações sobre três espécies de penguins, como por exemplo massa corpórea, tamanho das patas e etc. Este pacote pode ser instaldo por `install.packges("palmerpenguins")` e ativado com `library(palmerpenguins)`.
+Antes de tudo instale o pacote *tydiverse* utlizando o comando `install.packges("tidyverse")` e posteriormente ative a biblioteca com `library(tidyverse)`. Os exemplos dos códigos e bibliotecas estão no arquivo *Analise_de_dados_tidyverse* deste repositótio.
+Como exemplo, será utlizado o conjunto de dados *palmerpenguis* que traz informações sobre três espécies de penguins e o *diamonds* que vem por padrão na biblioteca *ggplot2*. Estes pacotes pode ser instaldo por `install.packges("palmerpenguins")` e ativado com `library(palmerpenguins)`.
 
 ## 📥 Importando os Dados
-Evidentemente para realizar uma análise de dados no R se fazem necessários dados, podemos trabalhar com alguns conjuntos de dados já disponiveis po padrão no R, como o *diamonds* por exemplo, ou importar via internet um conjunto como o *palmerpenguins*, porém não nos limitamos a isso, de fato, como já foi citado anteriormente, o pacote *readr* nos fornece vários comando para importar dados de vários formatos, alguns dos principais são:
+Evidentemente, para realizar uma análise de dados no R se fazem necessários dados, podemos trabalhar com alguns conjuntos de dados já disponiveis por padrão no R, como o *diamonds* por exemplo, ou importar via internet um conjunto como o *palmerpenguins*, porém não nos limitamos a isso, de fato, como já foi citado anteriormente, o pacote *readr* nos fornece vários comando para importar dados de vários formatos, alguns dos principais são:
 
 - `read_csv()`: Leitura de aquivos do tipo *csv*, valores separados por virgulas.
   
@@ -29,20 +29,20 @@ Evidentemente para realizar uma análise de dados no R se fazem necessários dad
 - `read_log()`: Leitura de aquivos do tipo *log*, log são registros de atividades realizadas por programas de computador. Eles contêm informações sobre eventos, processos ou mensagens que ocorrem em um sistema, como gravação ou leitura em um banco de dados.
 
 ## 🔎 Análise Exploratória
-O primeiro paso a se tomar depois de ter importado o conjunto de dados é realizar uma análise exploratória, deste modo é possível ter uma idéia basica sobre a estrutura dos dados a serem manipulados, para assim realizar algum tipo de limpeza ou mudança. A sintaxe destas funções são na forma `função(conjunto de dados)`.
+O primeiro paso a se tomar depois de ter importado o conjunto de dados é realizar uma análise exploratória, deste modo é possível ter uma idéia básica sobre a estrutura dos dados a serem manipulados, para assim realizar algum tipo de limpeza ou mudança. A sintaxe destas funções são na forma `função(conjunto de dados)`.
 
 - `head()`: Retorna apena as 6 primeiras linhas de um conjunto de dados.
 
-- `view()`: Retorna uma data frame resumido do conjunto de dados. 
+- `view()`: Retorna um data frame resumido do conjunto de dados. 
   
 - `str()`: Nos da informações sobre a estrutura do conjunto de dados, com o nome das colunas e os tipos de dados presentes nelas.
   
-- `glimpse()`: Retorna um resumo do conjunto de daados, com a quantidade de linhas, quantidade de colunas, bem como um exemplo dos dados presentes em cada coluna.
+- `glimpse()`: Retorna um resumo do conjunto de dados, com a quantidade de linhas, quantidade de colunas, bem como um exemplo dos dados presentes em cada coluna.
   
 - `colnames()`: Retorna o nome de cada coluna presente no conjunto de dados.
 
 ## 🧹 Limpeza, Organização e Transformação dos Dados
-Neste passo vamos instalar mais alguns pacotes para ajudar na limpeza e filtragem dos dados, novamente para instalar os devidos pacotes use `install.packges(nome do pacote)` e depois `library(nome do pacote)` para carregalo. Os pacotes são:
+Neste passo vamos instalar mais alguns pacotes para ajudar na limpeza e filtragem dos dados, novamente para instalar os devidos pacotes, como já citado, os exemplos acompanham o arquivo .R. Os pacotes são:
 
 - **Here:** Pacote que adiciona funções que facilitam a referencia à arquivos.
 - **Skimr:** Adiciona funções que facilitam o resumo de informações presentes no conjunto de dados.
@@ -52,9 +52,9 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 
 ### Limpeza Inicial
 
-- `skim_without_charts()`: Nos dá um sumário contendo o nome do banco de dados, o numero de linhjas e colunas, os tipos de colunas e um resumos dos diferentes tipos de dados presentes em cada coluna.
+- `skim_without_charts()`: Nos dá um sumário contendo o nome do banco de dados, o numero de linhas e colunas, os tipos de colunas e um resumos dos diferentes tipos de dados presentes em cada coluna.
   
-- `select()`: Assim como no *SQL*, esta função permite selecionar apenas colunas especificas do conjuhnto de dados. Mudando um pouco a sintaxe é possivel selecionar o complementar de um conjuntos de coluas especifico, basta adicionarmos o sinal "-" antes do nome da coluna. Sua sintaxe é `select(nomes das colunas)`.
+- `select()`: Assim como no *SQL*, esta função permite selecionar apenas colunas específicas do conjuhnto de dados. Mudando um pouco a sintaxe é possível selecionar o complementar de um conjuntos de coluas específico, basta adicionarmos o sinal "-" antes do nome da coluna. Sua sintaxe é `select(nomes das colunas)`.
   
 - `rename()`: Permite alterar o nome de certas colunas no banco de dados. Sua sintaxe é `rename(novo nome da coluna = nome da coluna)`.
   
@@ -66,8 +66,8 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 
 ### Filtrando e Organizando
 
-- `arrange()`: Ordena o conjunto de dados com base em uma coluna escolhida, retornando assim um tibble com os dados ordenados. Por padrão os dados são ordenados em ordem *crescente*, porem podemos ordelos em ordem *decrescente* adicionando o sinal "-" antes do nome da coluna. Sua sintaxe é `arrange(nome da coluna)`. <br/>
-  A ordenação dos dados **não** é salva automaticamente com a execução desta funnção, é preciso fazer uma atribuição nomeando eles novamente, como por exemplo: `penguins_ordenados <- penguins %>% arrange(-bill_lenght_mm)`.
+- `arrange()`: Ordena o conjunto de dados com base em uma coluna escolhida, retornando assim um *tibble* com os dados ordenados. Por padrão os dados são ordenados em ordem *crescente*, porem podemos ordelos em ordem *decrescente* adicionando o sinal "-" antes do nome da coluna. Sua sintaxe é `arrange(nome da coluna)`. <br/>
+  A ordenação dos dados **não** é salva automaticamente com a execução desta função, é preciso fazer uma atribuição nomeando eles novamente, como por exemplo: `penguins_ordenados <- penguins %>% arrange(-bill_lenght_mm)`.
 
 - `drop_na()`: Remove todas as linhas com celulas vazias (valores N/A) do conjunto de dados.
 
@@ -99,13 +99,13 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 
 - `mean()`: Retorna a *média* de variaveis selecionadas. A média é uma medida estatística a priori dos dados que nos diz o centro de densidade da distribuição dos dados.
   
-- `median()`: Nos dá a mediana do conjunto de dados. A mediana é o valor central de um conjunto de dados ordenado de forma crescente ou decrescente.
+- `median()`: Nos da a mediana do conjunto de dados. A mediana é o valor central de um conjunto de dados ordenado de forma crescente ou decrescente.
 
 - `max()`: Retorna o valor máximo assumido no conjunto de dados.
 
 - `min()`: Retorna o valor mínimo assumido no conjunto de dados.
 
-- `range()`: Retorna os valores máximo e mínimos do conjunto de dados.
+- `range()`: Retorna os valores máximo e mínimo do conjunto de dados.
 
 - `quantile()`: Nos dá os quartis do conjunto de dados. Os quartis são valores que dividem o conjunto de dados ordenado (de forma crescente ou decrescente) em quatro partes de mesma quantia de dados. Alguns exemplos de sua sintaxe:
   - `quantile(x)`: Retrona os quartis de x.
@@ -119,31 +119,31 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 Sua sintaxe é `cor(x, y)`, sendo x e y as variaveis.
 
 ### Análise Gráfica
-Para esta parte, além do conjunto de dados *palmerpenguins*, será utilizado o conjunto de dados *diamonds* que vem por padrão no pacote *ggplot*. Os exemplos aplicados dos gráficos estarão no código em R do repositório.
+Para esta parte, além do conjunto de dados *palmerpenguins*, será utilizado o conjunto de dados *diamonds* que vem por padrão no pacote *ggplot2*. Os exemplos aplicados dos gráficos estarão no código .R do repositório.
 
 - `hist()`: Constroi um histograma dos dados com base na frequencia de seus valores. Podemos mudar a cor do histograma com a estética `color`, e mudar os rotulos dos eixos com `xlab`, `ylab`, bem como o nome do gráfico com `main`.
   
-- `boxplot:` Constroi um boxplot dos dados selecionados. Novamente podemosnm mudar sua cor com `color` e nome com `main`.
+- `boxplot:` Constroi um boxplot dos dados selecionados. Novamente podemos mudar sua cor com `color` e nome com `main`.
 
-- `ggplot()`: Cria um grafico vazio para adicionarmos estéticas conforme o tipo de gráfico.
+- `ggplot()`: Cria um gráfico vazio para adicionarmos estéticas conforme o tipo de gráfico.
 
 - `aes()`: Atribuiu quais variaveis do conjunto de dados serão o eixo das absissas *x* e quais serão o eixo das ordenadas *y* no gráfico.
 
-- `geom_point()`: Dispõe os dados como pontos no gráfico, construindo pior exemplo graficos de disperção.
+- `geom_point()`: Dispõe os dados como pontos no gráfico, construindo por exemplo gráficos de disperção.
 
-- `geom_smooth()`: Cria um grafico de linhas com os dados, podendo ser combinado com o `geom_point` para tornar evidente tendencias nos dados por exemplo.
+- `geom_smooth()`: Cria um gráfico de linhas com os dados, podendo ser combinado com o `geom_point` para tornar evidente tendências nos dados por exemplo.
 
-- `geom_bar()`: Dispõe os dados como retnagulos, criando assim grafico de barras. Podemos a cor do contorno dos rentangulos com a estética `color`, bem como a cor do interior de cada retanmgulo com `fill`, sendo que mudando a variavel ao qual *fill* está atribuido, mudamos o modo em que as barras são coloridas.
+- `geom_bar()`: Dispõe os dados como retângulos, criando assim grafico de barras. Podemos mudar a cor do contorno dos rentangulos com a estética `color`, bem como a cor do interior de cada retanmgulo com `fill`, sendo que mudando a variavel ao qual *fill* está atribuido, mudamos o modo em que as barras são coloridas.
 
-- `facet_wrap()`: Escolhida uma variavel, esta função cria um gráfico para cada elemnto da variavel
+- `facet_wrap()`: Escolhida uma variavel, esta função cria um gráfico para cada elemnto da variavel.
 
 - `facet_grid()`: Também cria gráficos dividindo os dados conforme variaveis escolhidas, sendo que agora divide verticalmente os dados conforme a primeira variavel escolhida, e horizontalmente conforme a segunda variavel escolhida.
 
 - `labs()`: Permite personalizar os texto fora do grid do seu gráfico, como adicionado titulo com `title`, subtitulo com `subtitle` e legenda com `caption`.
 
-- `annotate()`: Permite adicionar textos agora nmo interior do grid do gráfico, podendo escolhera localização do texto no grid, a cor com `color`, o estilo da fonte com `fontface`, o tamanho da fonte com `size` e até mesmo o ângulo do texto com relação ao eixo *x* com `angle`.
+- `annotate()`: Permite adicionar textos agora no interior do grid do gráfico, podendo escolher a localização do texto no grid, a cor com `color`, o estilo da fonte com `fontface`, o tamanho da fonte com `size` e até mesmo o ângulo do texto em relação ao eixo *x* com `angle`.
 
-- `ggsave()`: Salva o ultimo grafico criado em um formado escolhido, como pdf ou png por exemplo, podemos também modificar as dimenções da imagem salva adicionando as clausulas `width` e `height`.
+- `ggsave()`: Salva o último gráfico criado em um formado escolhido, como .pdf ou .png por exemplo, podemos também modificar as dimenções da imagem salva adicionando as cláusulas `width` e `height`.
 
 
 
