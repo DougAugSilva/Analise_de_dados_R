@@ -91,7 +91,7 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 - `mutate()`: Cria uma nova coluna com base em clounas existentes, podendo por exemplo criar uma nova coluna com unidades de medidas convertidas de uma coluna existente.
 
 ## 📊 Análise Estatística e Gráfica dos Dados
- Depois de uma Análise Exploratória e uma Limpeza dos dados disponiveis, serão utilizadas funções presentes por padrão no *R* e no pacote *ggplot2* do *tidyverse* para uma análise gráfica e estatíostica mais aprofundada dos dados.
+ Depois de uma Análise Exploratória e uma Limpeza dos dados disponiveis, serão utilizadas funções presentes por padrão no *R* e no pacote *ggplot2* do *tidyverse* para uma análise gráfica e estatística mais aprofundada dos dados.
 
 ![Grafico2](https://github.com/DougAugSilva/Analise_de_dados_R/blob/main/Graficos/Rplot10.png)
 
