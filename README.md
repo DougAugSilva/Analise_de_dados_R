@@ -93,6 +93,8 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 ## 📊 Análise Estatística e Gráfica dos Dados
  Depois de uma Análise Exploratória e uma Limpeza dos dados disponiveis, serão utilizadas funções presentes por padrão no *R* e no pacote *ggplot2* do *tidyverse* para uma análise gráfica e estatíostica mais aprofundada dos dados.
 
+![Grafico2](https://github.com/DougAugSilva/Analise_de_dados_R/blob/main/Graficos/Rplot10.png)
+
  ### Estatística Descritiva
 
 - `mean()`: Retorna a *média* de variaveis selecionadas. A média é uma medida estatística a priori dos dados que nos diz o centro de densidade da distribuição dos dados.
