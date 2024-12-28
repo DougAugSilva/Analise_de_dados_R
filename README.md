@@ -1,6 +1,9 @@
 # Utilizando tidyverse para Analizar Dados com R
+
 O conteudo aqui apresentado são anotações feitas durante o curso *Data Analysis with R Programming* que faz parte do *Google Data Analist Certificate*, e tem como objetivo servir de guia para quem procura realizar análises de conjuntos de dados com a linguagem de programação R.
 O conteudo aqui apresentado são funções básicas para importar, realizar uma análise exploratória, limpar e organizar os dados e plotar gráficos utilizando o pacote *tidyverse*, sendo que os pacotes abordados serão:
+
+![Grafico1](https://github.com/DougAugSilva/Analise_de_dados_R/blob/main/Graficos/Rplot09.png)
 
  - **ggplot2:** Possui uma variedade de Ferramentas para visualização de dados e plotagem de gráficos.
  - **tidyr:** Contém várias ferramentas para a limpeza e compreção de dados.
@@ -9,10 +12,6 @@ O conteudo aqui apresentado são funções básicas para importar, realizar uma 
 
 Antes de tudo instale o pacote *tydiverse* utlizando o comando `install.packges("tidyverse")` e posteriormente ative a biblioteca com `library(tidyverse)`.
 Como exemplo será utlizado o conjunto de dados *palmerpenguis* que traz informações sobre três espécies de penguins, como por exemplo massa corpórea, tamanho das patas e etc. Este pacote pode ser instaldo por `install.packges("palmerpenguins")` e ativado com `library(palmerpenguins)`.
-
-![Grafico1](https://github.com/DougAugSilva/Analise_de_dados_R/blob/main/Graficos/Rplot03.png)
-
-
 
 ## 📥 Importando os Dados
 Evidentemente para realizar uma análise de dados no R se fazem necessários dados, podemos trabalhar com alguns conjuntos de dados já disponiveis po padrão no R, como o *diamonds* por exemplo, ou importar via internet um conjunto como o *palmerpenguins*, porém não nos limitamos a isso, de fato, como já foi citado anteriormente, o pacote *readr* nos fornece vários comando para importar dados de vários formatos, alguns dos principais são:
