@@ -127,7 +127,7 @@ Para essa parte, além do conjunto de dados *palmerpenguins*, será utilizado o 
 
 - `ggplot()`: Cria um gráfico vazio para adicionarmos estéticas conforme o tipo de gráfico.
 
-- `aes()`: Atribuiu quais variáveis do conjunto de dados serão o eixo das abscissas *x* e quais serão o eixo das ordenadas *y* no gráfico.
+- `aes()`: Atribuí quais variáveis do conjunto de dados serão o eixo das abscissas *x* e quais serão o eixo das ordenadas *y* no gráfico.
 
 - `geom_point()`: Dispõe os dados como pontos no gráfico, construindo por exemplo gráficos de disperção.
 
