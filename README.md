@@ -115,7 +115,7 @@ Alem dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no *
 
 - `sd()`: Calcula o *desvio padrão* das variaveis selecionadas. O desvio padrão mede o quão os valores do conjunto de dados estão disperços em relação a média.
   
-- `cor()`: Mede a correlação da variação entre duas variaveis escolhidas, possuindo valores no intervalo entre - 1 e 1, sendo valores póroximo de 1 representando uma correlão positivas forte, e valores próximos de -1 uma correlção negativa forte. <br/>
+- `cor()`: Mede a correlação da variação entre duas variaveis escolhidas, possuindo valores no intervalo entre - 1 e 1, sendo valores próximos de 1 representando uma correlão positivas forte, e valores próximos de -1 uma correlção negativa forte. <br/>
 Sua sintaxe é `cor(x, y)`, sendo x e y as variaveis.
 
 ### Análise Gráfica
