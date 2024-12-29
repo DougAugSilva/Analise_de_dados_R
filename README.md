@@ -59,9 +59,10 @@ Além dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no 
 - `rename()`: Permite alterar o nome de certas colunas no banco de dados. Sua sintaxe é `rename(novo nome da coluna = nome da coluna)`.
   
 - `rename_with()`: Altera o nome das colunas para que estes sejam mais consistentes, podendo deixar os nomes em letras maiusculas ou minusculas, sua sintaxe é:
-  - `rename_with(penguins , toupper)`: Deixa todos os nomes das colunas do banco de dados em *caixa alta*.
-  - `rename_with(penguins , toulower)`: Deixa todos os nomes das colunas do banco de dados em *caixa baixa*.
-    
+  ```r
+   rename_with(penguins , toupper)  #....Deixa todos os nomes das colunas do banco de dados em caixa alta.
+   rename_with(penguins , toulower) #....Deixa todos os nomes das colunas do banco de dados em caixa baixa.
+   ``` 
 - `clean_name()`: Garante que os nomes de cada coluna no conjunto de dados seja único e consistente, fazendo com que cada nome contenha apenas caracteres alfanumericos e sublinhados "_". Sua sintaxe é `clean_name(palmerpenguins)`.
 
 ### Filtrando e Organizando
@@ -75,13 +76,15 @@ Além dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no 
   - Sintaxe: `palmerpenguins %>% goup_by(variavel agrupadora)`
 
 - `summerize()`: É utilizada dentro de uma clausula da função `goup_by` para calcurar estatísticas dos dados agrupados, ela permite extrair dos dados agrupados informações como a *média*, *desvio padrão*, *máximos*, *minimos* e etc, de uma só vez. Alguns exemplos de sua sintaxe são:
-  - `summerize(media = mean(variavel_numerica))`
-  - `summerize(media = mean(variavel_numerica), min(variavel_numerica), max(variavel_numerica))`
-
+```r 
+ summerize(media = mean(variavel_numerica))
+ summerize(media = mean(variavel_numerica), min(variavel_numerica), max(variavel_numerica))
+```
 - `filter()`: Seleciona apenas dados que atendem um certo critério especifico. Alguns exeplos de sua sintaxe são:
-  - `penguins %>% filter(species == "Adelie")`
-  - `penguins %>% filter(bill_lenght_mm <= 40)`
- 
+```r
+ penguins %>% filter(species == "Adelie")
+ penguins %>% filter(bill_lenght_mm <= 40)
+``` 
 ### Transformando e Editando
 
 - `separate()`: Permite separar colunas compostas de strings em duas ou mais colunas, com base em um separador escolhido. Por exemplo: `separate(employee, name, into = c("first_name", "last_name"), sep = " ")` separa os dados da coluna com o nome *employee* em duas colunas chamadas *first_name* e *last_name*, respectivamente, separando quando o pirmeiro espaço em branco " " aparecer. A coluna original deixa de existir após a execução da função.
@@ -89,6 +92,15 @@ Além dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no 
 - `unite()`: Faz basicamente o oposto da `separate()`, unindo duas ou mais colunas de strings em uma única. Um exemplo é: `unite(employee, "name", first_name, last_name, sep = " ")`, que une os dados das colunas *first_name* e *last_name* em uma coluna chamada *name*, com o seprarador " " entre os dados.
 
 - `mutate()`: Cria uma nova coluna com base em clounas existentes, podendo por exemplo criar uma nova coluna com unidades de medidas convertidas de uma coluna existente.
+```r
+#Classifica os penguins de acordo com o peso
+penguins %>% mutate(categorias_de_peso = case_when(     
+  body_mass_g <= 3900 ~ "Abaixo do Peso",
+  body_mass_g > 3900 & body_mass_g <= 5100 ~ "Saudavel",
+  body_mass_g > 5100 ~ "Acima do Peso"
+  ))
+```
+  
 
 ## 📊 Análise Estatística e Gráfica dos Dados
  Depois de uma Análise Exploratória e uma Limpeza dos dados disponiveis, serão utilizadas funções presentes por padrão no *R* e no pacote *ggplot2* do *tidyverse* para uma análise gráfica e estatística mais aprofundada dos dados.
@@ -108,9 +120,10 @@ Além dos pacotes mencionados, vamos fazer uso novamente do *dplyr* presente no 
 - `range()`: Retorna os valores máximo e mínimo do conjunto de dados.
 
 - `quantile()`: Nos dá os quartis do conjunto de dados. Os quartis são valores que dividem o conjunto de dados ordenado (de forma crescente ou decrescente) em quatro partes de mesma quantia de dados. Alguns exemplos de sua sintaxe:
-  - `quantile(x)`: Retrona os quartis de x.
-  - `quantile(x, 0.6)`: Retorna o valor do conjunto de dados x que é maior que 60% dos dados.
- 
+```r
+  quantile(x)       #....Retrona os quartis de x.
+  quantile(x, 0.6)  #....Retorna o valor do conjunto de dados x que é maior que 60% dos dados.
+ ```
 - `summary()`: Nos dá um resumo com o valor máximo, mínimo, mediana, primeiro e segundo quartis do conjunto de dados.
 
 - `sd()`: Calcula o *desvio padrão* das variaveis selecionadas. O desvio padrão mede o quão os valores do conjunto de dados estão disperços em relação a média.
@@ -122,9 +135,17 @@ Sua sintaxe é `cor(x, y)`, sendo x e y as variaveis.
 Para essa parte, além do conjunto de dados *palmerpenguins*, será utilizado o conjunto de dados *diamonds* que vem por padrão no pacote *ggplot2*. Os exemplos aplicados dos gráficos estão no código .R do repositório.
 
 - `hist()`: Constroi um histograma dos dados com base na frequência de seus valores. Podemos mudar a cor do histograma com a estética `color`, e mudar os rótulos dos eixos com `xlab`, `ylab`, bem como o nome do gráfico com `main`.
-  
+```r
+#Constroi um histograma do comprimentos dos bicos
+hist(drop_na(penguins)$bill_length_mm,
+     col = "lightblue",
+     xlab  = "Comprimentos de Bico em mm", 
+     ylab = "Frequência",
+     main = "Histograma Comprimentos de Bico")
+```  
 - `boxplot:` Constrói um boxplot dos dados selecionados. Novamente podemos mudar sua cor com `color` e nome com `main`.
 
+  
 - `ggplot()`: Cria um gráfico vazio para adicionarmos estéticas conforme o tipo de gráfico.
 
 - `aes()`: Atribuí quais variáveis do conjunto de dados serão o eixo das abscissas *x* e quais serão o eixo das ordenadas *y* no gráfico.
@@ -132,17 +153,39 @@ Para essa parte, além do conjunto de dados *palmerpenguins*, será utilizado o 
 - `geom_point()`: Dispõe os dados como pontos no gráfico, construindo por exemplo gráficos de disperção.
 
 - `geom_smooth()`: Cria um gráfico de linhas com os dados, podendo ser combinado com o `geom_point` para tornar evidente tendências nos dados por exemplo.
-
+```r
+#Cria um grafico de linha que correlaciona os dados juntamente com os pontos
+ggplot(data = penguins) +  
+  geom_smooth(mapping = aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g, shape = species), color = "red")
+```
 - `geom_bar()`: Dispõe os dados como retângulos, criando assim gráfico de barras. Podemos mudar a cor do contorno dos rentangulos com a estética `color`, bem como a cor do interior de cada retangulo com `fill`, sendo que mudando a variável ao qual *fill* está atribuído, mudamos o modo em que as barras são coloridas.
 
 - `facet_wrap()`: Escolhida uma variavel, esta função cria um gráfico para cada elemnto da variável.
 
 - `facet_grid()`: Também cria gráficos dividindo os dados conforme variaveis escolhidas, sendo que agora divide verticalmente os dados conforme a primeira variável escolhida, e horizontalmente conforme a segunda variavel escolhida.
-
+```r
+  #Cria um  grafico para cada tipo de corte de diamante
+  ggplot(data = diamonds) + 
+    geom_bar(mapping = aes(x = color, fill = cut)) + facet_wrap(~cut) +
+    labs( title = "Tipos de Corte dos Diamantes",
+          subtitle = "Exemplo da função face_wrap do ggplot2",
+          caption = "Conjunto de dados diamonds")
+```
 - `labs()`: Permite personalizar os texto fora do grid do seu gráfico, como adicionado titulo com `title`, subtítulo com `subtitle` e legenda com `caption`.
-
 - `annotate()`: Permite adicionar textos agora no interior do grid do gráfico, podendo escolher a localização do texto no grid, a cor com `color`, o estilo da fonte com `fontface`, o tamanho da fonte com `size` e até mesmo o ângulo do texto em relação ao eixo *x* com `angle`.
-
+```r
+  #Grafico com a adição de um titulo, subtitulom, legenda e texto personalisado no grid,
+  #adiciona também anotações dentro do grid do grafico
+  ggplot(data = penguins) + 
+    geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+    labs(title = "Palmer Penguins: Massa Corporar vs. Comprimento de Nadadeira",
+       subtitle = "Amostra com tres especies de penguim",
+       caption = "Dados Coletados por Dr. Kristen Grorman") +
+          annotate("text", x = 220, y = 3500,
+             label = "Os Gentoos sao os maiores", color = "blue",
+             fontface = "bold", size =4.5, angle = 25)
+```
 - `ggsave()`: Salva o último gráfico criado em um formado escolhido, como .pdf ou .png por exemplo, podemos também modificar as dimenções da imagem salva adicionando as cláusulas `width` e `height`.
 
 
