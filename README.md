@@ -1,4 +1,4 @@
-# Utilizando tidyverse para Analizar Dados com R
+# Utilizando Tidyverse Para Analizar Dados com R
 
 O conteúdo aqui apresentado são anotações feitas durante o curso *Data Analysis with R Programming*, que faz parte do *Google Data Analist Certificate* e tem como objetivo servir de guia para quem procura realizar análises de conjuntos de dados com a linguagem de programação R.
 Aqui estão presentes funções básicas para importar, realizar uma análise exploratória, limpar, organizar os dados e plotar gráficos como na figura abaixo, utilizando o pacote *tidyverse*, sendo que os pacotes abordados serão:
