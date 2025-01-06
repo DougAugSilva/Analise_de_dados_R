@@ -1,5 +1,10 @@
 # Utilizando Tidyverse Para Analizar Dados com R
 
+#### Douglas Augusto da Silva
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dougaugsilva/)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DougAugSilva)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:douglasaugustosilva323@gmail.com)
+
 O conteúdo aqui apresentado são anotações feitas durante o curso *Data Analysis with R Programming*, que faz parte do *Google Data Analist Certificate* e tem como objetivo servir de guia para quem procura realizar análises de conjuntos de dados com a linguagem de programação R.
 Aqui estão presentes funções básicas para importar, realizar uma análise exploratória, limpar, organizar os dados e plotar gráficos como na figura abaixo, utilizando o pacote *tidyverse*, sendo que os pacotes abordados serão:
 
